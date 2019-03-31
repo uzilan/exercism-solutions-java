@@ -1,13 +1,10 @@
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static org.junit.Assert.*;
 
 public class PythagoreanTripletTest {
 
@@ -43,13 +40,13 @@ public class PythagoreanTripletTest {
     public void shouldMakeTripletsUpToTen() {
         List<Long> actual
                 = PythagoreanTriplet
-                        .makeTripletsList()
-                        .withFactorsLessThanOrEqualTo(10)
-                        .build()
-                        .stream()
-                        .map(t -> t.calculateProduct())
-                        .sorted()
-                        .collect(Collectors.toList());
+                .makeTripletsList()
+                .withFactorsLessThanOrEqualTo(10)
+                .build()
+                .stream()
+                .map(t -> t.calculateProduct())
+                .sorted()
+                .collect(Collectors.toList());
         List<Long> expected = Arrays.asList(60l, 480l);
         assertEquals(expected, actual);
     }
@@ -58,14 +55,14 @@ public class PythagoreanTripletTest {
     public void shouldMakeTripletsElevenToTwenty() {
         List<Long> actual
                 = PythagoreanTriplet
-                        .makeTripletsList()
-                        .withFactorsGreaterThanOrEqualTo(11)
-                        .withFactorsLessThanOrEqualTo(20)
-                        .build()
-                        .stream()
-                        .map(t -> t.calculateProduct())
-                        .sorted((p1, p2) -> Double.compare(p1, p2))
-                        .collect(Collectors.toList());
+                .makeTripletsList()
+                .withFactorsGreaterThanOrEqualTo(11)
+                .withFactorsLessThanOrEqualTo(20)
+                .build()
+                .stream()
+                .map(t -> t.calculateProduct())
+                .sorted((p1, p2) -> Double.compare(p1, p2))
+                .collect(Collectors.toList());
         List<Long> expected = Arrays.asList(3840l);
         assertEquals(expected, actual);
     }
@@ -74,14 +71,14 @@ public class PythagoreanTripletTest {
     public void shouldMakeTripletsAndFilterOnSum() {
         List<Long> actual
                 = PythagoreanTriplet
-                        .makeTripletsList()
-                        .withFactorsLessThanOrEqualTo(100)
-                        .thatSumTo(180)
-                        .build()
-                        .stream()
-                        .map(t -> t.calculateProduct())
-                        .sorted((p1, p2) -> Double.compare(p1, p2))
-                        .collect(Collectors.toList());
+                .makeTripletsList()
+                .withFactorsLessThanOrEqualTo(100)
+                .thatSumTo(180)
+                .build()
+                .stream()
+                .map(t -> t.calculateProduct())
+                .sorted((p1, p2) -> Double.compare(p1, p2))
+                .collect(Collectors.toList());
         List<Long> expected = Arrays.asList(118080l, 168480l, 202500l);
         assertEquals(expected, actual);
     }

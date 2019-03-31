@@ -1,9 +1,9 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class KindergartenGardenTest {
 
@@ -14,12 +14,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.RADISHES, Plant.CLOVER, Plant.GRASS, Plant.GRASS);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void singleStudent2() {
         String student = "Alice";
@@ -27,12 +26,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.VIOLETS, Plant.CLOVER, Plant.RADISHES, Plant.CLOVER);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void twoStudents() {
         String student = "Bob";
@@ -40,12 +38,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.CLOVER, Plant.GRASS, Plant.RADISHES, Plant.CLOVER);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void oneGardenSecondStudent() {
         String student = "Bob";
@@ -53,12 +50,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.CLOVER, Plant.CLOVER, Plant.CLOVER, Plant.CLOVER);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void oneGardenThirdStudent() {
         String student = "Charlie";
@@ -66,12 +62,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.GRASS, Plant.GRASS, Plant.GRASS, Plant.GRASS);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void fullGardenFirstStudent() {
         String student = "Alice";
@@ -79,12 +74,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.VIOLETS, Plant.RADISHES, Plant.VIOLETS, Plant.RADISHES);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void fullGardenSecondStudent() {
         String student = "Bob";
@@ -92,12 +86,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.CLOVER, Plant.GRASS, Plant.CLOVER, Plant.CLOVER);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void fullGardenSecondToLastStudent() {
         String student = "Kincaid";
@@ -105,12 +98,11 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.GRASS, Plant.CLOVER, Plant.CLOVER, Plant.GRASS);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void fullGardenLastStudent() {
         String student = "Larry";
@@ -118,8 +110,8 @@ public class KindergartenGardenTest {
         List<Plant> expected = Arrays.asList(Plant.GRASS, Plant.VIOLETS, Plant.CLOVER, Plant.VIOLETS);
 
         assertEquals(
-            expected,
-            new KindergartenGarden(plants).getPlantsOfStudent(student)
+                expected,
+                new KindergartenGarden(plants).getPlantsOfStudent(student)
         );
     }
 

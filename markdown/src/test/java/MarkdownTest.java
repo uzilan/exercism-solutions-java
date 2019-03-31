@@ -1,7 +1,7 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MarkdownTest {
 
@@ -20,7 +20,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void italics() {
         String input = "_This will be italic_";
@@ -29,7 +28,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void boldText() {
         String input = "__This will be bold__";
@@ -38,7 +36,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void normalItalicsAndBoldText() {
         String input = "This will _be_ __mixed__";
@@ -47,7 +44,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void withH1HeaderLevel() {
         String input = "# This will be an h1";
@@ -56,7 +52,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void withH2HeaderLevel() {
         String input = "## This will be an h2";
@@ -65,7 +60,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void withH6HeaderLevel() {
         String input = "###### This will be an h6";
@@ -74,7 +68,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void unorderedLists() {
         String input = "* Item 1\n* Item 2";
@@ -83,7 +76,6 @@ public class MarkdownTest {
         assertEquals(expected, markdown.parse(input));
     }
 
-    
     @Test
     public void aLittleBitOfEverything() {
         String input = "# Header!\n* __Bold Item__\n* _Italic Item_";

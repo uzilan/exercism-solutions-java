@@ -1,9 +1,9 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import static org.junit.Assert.assertEquals;
 
 public class CollatzCalculatorTest {
 
@@ -22,25 +22,21 @@ public class CollatzCalculatorTest {
         assertEquals(0, collatzCalculator.computeStepCount(1));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testCorrectNumberOfStepsWhenAllStepsAreDivisions() {
         assertEquals(4, collatzCalculator.computeStepCount(16));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testCorrectNumberOfStepsWhenBothStepTypesAreNeeded() {
         assertEquals(9, collatzCalculator.computeStepCount(12));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testAVeryLargeInput() {
         assertEquals(152, collatzCalculator.computeStepCount(1000000));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testZeroIsConsideredInvalidInput() {
         expectedException.expect(IllegalArgumentException.class);
@@ -49,7 +45,6 @@ public class CollatzCalculatorTest {
         collatzCalculator.computeStepCount(0);
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testNegativeIntegerIsConsideredInvalidInput() {
         expectedException.expect(IllegalArgumentException.class);

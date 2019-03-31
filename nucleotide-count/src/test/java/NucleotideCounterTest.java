@@ -1,11 +1,12 @@
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.Map;
+
+import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.hasEntry;
+import static org.junit.Assert.assertThat;
 
 public class NucleotideCounterTest {
 
@@ -24,7 +25,6 @@ public class NucleotideCounterTest {
         ));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testDnaStringHasOneNucleotide() {
         NucleotideCounter nucleotideCounter = new NucleotideCounter("G");
@@ -37,7 +37,6 @@ public class NucleotideCounterTest {
         ));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testRepetitiveSequenceWithOnlyGuanine() {
         NucleotideCounter nucleotideCounter = new NucleotideCounter("GGGGGGG");
@@ -50,11 +49,10 @@ public class NucleotideCounterTest {
         ));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testDnaStringHasMultipleNucleotide() {
         NucleotideCounter nucleotideCounter
-            = new NucleotideCounter("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC");
+                = new NucleotideCounter("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC");
         Map<Character, Integer> counts = nucleotideCounter.nucleotideCounts();
         assertThat(counts, allOf(
                 hasEntry('A', 20),
@@ -64,7 +62,6 @@ public class NucleotideCounterTest {
         ));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void testDnaStringHasInvalidNucleotides() {
         expectedException.expect(IllegalArgumentException.class);

@@ -3,17 +3,17 @@ import java.time.LocalDateTime;
 
 class Gigasecond {
 
-   private final LocalDateTime gigatime;
+    private final LocalDateTime gigatime;
 
-   Gigasecond(LocalDate birthDate) {
-      this(birthDate.atStartOfDay());
-   }
+    Gigasecond(LocalDate birthDate) {
+        this(birthDate.atStartOfDay());
+    }
 
-   Gigasecond(LocalDateTime birthDateTime) {
-      this.gigatime = birthDateTime.plusSeconds((long) 1E9);
-   }
+    Gigasecond(LocalDateTime birthDateTime) {
+        this.gigatime = birthDateTime.plusSeconds((long) 1E9);
+    }
 
-   LocalDateTime getDate() {
-      return gigatime;
-   }
+    LocalDateTime getDate() {
+        return gigatime;
+    }
 }

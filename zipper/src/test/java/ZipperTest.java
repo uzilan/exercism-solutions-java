@@ -1,7 +1,7 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ZipperTest {
 
@@ -61,17 +61,17 @@ public class ZipperTest {
         zipper.setValue(5);
         String expected =
                 "value: 1, " +
-                "left: { " +
-                    "value: 5, " +
-                    "left: null, " +
-                    "right: { " +
+                        "left: { " +
+                        "value: 5, " +
+                        "left: null, " +
+                        "right: { " +
                         "value: 3, " +
                         "left: null, " +
                         "right: null } }, " +
-                "right: { " +
-                    "value: 4, " +
-                    "left: null, " +
-                    "right: null }";
+                        "right: { " +
+                        "value: 4, " +
+                        "left: null, " +
+                        "right: null }";
         assertEquals(expected, zipper.toTree().printTree());
     }
 
@@ -82,17 +82,17 @@ public class ZipperTest {
         zipper.setValue(5);
         String expected =
                 "value: 1, " +
-                "left: { " +
-                    "value: 5, " +
-                    "left: null, " +
-                    "right: { " +
+                        "left: { " +
+                        "value: 5, " +
+                        "left: null, " +
+                        "right: { " +
                         "value: 3, " +
                         "left: null, " +
                         "right: null } }, " +
-                "right: { " +
-                    "value: 4, " +
-                    "left: null, " +
-                    "right: null }";
+                        "right: { " +
+                        "value: 4, " +
+                        "left: null, " +
+                        "right: null }";
         assertEquals(expected, zipper.toTree().printTree());
     }
 
@@ -103,20 +103,20 @@ public class ZipperTest {
         zipper.setLeft(new Zipper(5));
         String expected =
                 "value: 1, " +
-                "left: { " +
-                    "value: 2, " +
-                    "left: { " +
+                        "left: { " +
+                        "value: 2, " +
+                        "left: { " +
                         "value: 5, " +
                         "left: null, " +
                         "right: null }, " +
-                    "right: { " +
+                        "right: { " +
                         "value: 3, " +
                         "left: null, " +
                         "right: null } }, " +
-                "right: { " +
-                    "value: 4, " +
-                    "left: null, " +
-                    "right: null }";
+                        "right: { " +
+                        "value: 4, " +
+                        "left: null, " +
+                        "right: null }";
         assertEquals(expected, zipper.toTree().printTree());
     }
 
@@ -127,8 +127,8 @@ public class ZipperTest {
         zipper.setRight(null);
         String expected =
                 "value: 1, " +
-                "left: { value: 2, left: null, right: null }, " +
-                "right: { value: 4, left: null, right: null }";
+                        "left: { value: 2, left: null, right: null }, " +
+                        "right: { value: 4, left: null, right: null }";
         assertEquals(expected, zipper.toTree().printTree());
     }
 
@@ -141,20 +141,20 @@ public class ZipperTest {
         zipper.setRight(subtree.getRoot());
         String expected =
                 "value: 1, " +
-                "left: { " +
-                    "value: 2, " +
-                    "left: null, " +
-                    "right: { " +
+                        "left: { " +
+                        "value: 2, " +
+                        "left: null, " +
+                        "right: { " +
                         "value: 3, " +
                         "left: null, " +
                         "right: null } }, " +
-                "right: { " +
-                    "value: 6, " +
-                    "left: { " +
+                        "right: { " +
+                        "value: 6, " +
+                        "left: { " +
                         "value: 7, " +
                         "left: null, " +
                         "right: null }, " +
-                    "right: { " +
+                        "right: { " +
                         "value: 8, " +
                         "left: null, " +
                         "right: null } }";
@@ -168,17 +168,17 @@ public class ZipperTest {
         zipper.setValue(5);
         String expected =
                 "value: 1, " +
-                "left: { " +
-                    "value: 2, " +
-                    "left: null, " +
-                    "right: { " +
+                        "left: { " +
+                        "value: 2, " +
+                        "left: null, " +
+                        "right: { " +
                         "value: 5, " +
                         "left: null, " +
                         "right: null } }, " +
-                "right: { " +
-                    "value: 4, " +
-                    "left: null, " +
-                    "right: null }";
+                        "right: { " +
+                        "value: 4, " +
+                        "left: null, " +
+                        "right: null }";
         assertEquals(expected, zipper.toTree().printTree());
     }
 

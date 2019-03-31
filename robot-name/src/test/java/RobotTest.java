@@ -1,11 +1,10 @@
+import org.junit.Before;
+import org.junit.Test;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertThat;
-
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
 
 public class RobotTest {
 
@@ -14,7 +13,7 @@ public class RobotTest {
 
     @Before
     public void setUp() {
-      robot = new Robot();
+        robot = new Robot();
     }
 
     @Test
@@ -22,13 +21,11 @@ public class RobotTest {
         assertIsValidName(robot.getName());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void differentRobotsHaveDifferentNames() {
         assertThat(robot.getName(), not(equalTo(new Robot().getName())));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void resetName() {
         final String name = robot.getName();

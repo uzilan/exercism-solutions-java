@@ -1,7 +1,7 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ResistorColorTest {
 
@@ -20,7 +20,6 @@ public class ResistorColorTest {
         assertEquals(expected, resistorColor.colorCode(input));
     }
 
-    
     @Test
     public void testWhiteColorCode() {
         String input = "white";
@@ -29,7 +28,6 @@ public class ResistorColorTest {
         assertEquals(expected, resistorColor.colorCode(input));
     }
 
-    
     @Test
     public void testOrangeColorCode() {
         String input = "orange";
@@ -38,12 +36,11 @@ public class ResistorColorTest {
         assertEquals(expected, resistorColor.colorCode(input));
     }
 
-    
     @Test
     public void testColors() {
         String[] expected = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
 
         assertEquals(expected, resistorColor.colors());
     }
-    
+
 }

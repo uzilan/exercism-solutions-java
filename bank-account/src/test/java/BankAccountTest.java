@@ -1,15 +1,15 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.Random;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 public class BankAccountTest {
+
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
     private BankAccount bankAccount;
@@ -26,7 +26,6 @@ public class BankAccountTest {
         assertEquals(0, bankAccount.getBalance());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canDepositMoney() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -36,7 +35,6 @@ public class BankAccountTest {
         assertEquals(10, bankAccount.getBalance());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canDepositMoneySequentially() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -47,7 +45,6 @@ public class BankAccountTest {
         assertEquals(28, bankAccount.getBalance());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canWithdrawMoney() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -58,7 +55,6 @@ public class BankAccountTest {
         assertEquals(5, bankAccount.getBalance());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canWithdrawMoneySequentially() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -70,7 +66,6 @@ public class BankAccountTest {
         assertEquals(0, bankAccount.getBalance());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotWithdrawMoneyFromEmptyAccount() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -81,7 +76,6 @@ public class BankAccountTest {
         bankAccount.withdraw(5);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotWithdrawMoreMoneyThanYouHave() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -93,7 +87,6 @@ public class BankAccountTest {
         bankAccount.withdraw(7);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotDepositNegativeAmount() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -104,7 +97,6 @@ public class BankAccountTest {
         bankAccount.deposit(-1);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotWithdrawNegativeAmount() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -116,7 +108,6 @@ public class BankAccountTest {
         bankAccount.withdraw(-5);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotGetBalanceOfClosedAccount() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -129,7 +120,6 @@ public class BankAccountTest {
         bankAccount.getBalance();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotDepositMoneyIntoClosedAccount() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -141,7 +131,6 @@ public class BankAccountTest {
         bankAccount.deposit(5);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotWithdrawMoneyFromClosedAccount() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -154,7 +143,6 @@ public class BankAccountTest {
         bankAccount.withdraw(5);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void bankAccountIsClosedBeforeItIsOpened() throws BankAccountActionInvalidException {
         expectedException.expect(BankAccountActionInvalidException.class);
@@ -163,7 +151,6 @@ public class BankAccountTest {
         bankAccount.getBalance();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canAdjustBalanceConcurrently() throws BankAccountActionInvalidException, InterruptedException {
         bankAccount.open();

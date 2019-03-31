@@ -1,8 +1,3 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -10,6 +5,8 @@ import org.junit.rules.ExpectedException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class SeriesTest {
 
@@ -26,7 +23,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void hasDigitsLong() {
         Series series = new Series("0123456789");
@@ -37,7 +33,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void keepsTheDigitOrderIfReversed() {
         Series series = new Series("9876543210");
@@ -48,7 +43,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void keepsArbitraryDigitOrder() {
         Series series = new Series("936923468");
@@ -59,12 +53,11 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canSliceByOne() {
         Series series = new Series("01234");
         List<List<Integer>> expected = Arrays.asList(
-		 Collections.singletonList(0),
+                Collections.singletonList(0),
                 Collections.singletonList(1),
                 Collections.singletonList(2),
                 Collections.singletonList(3),
@@ -76,7 +69,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canSliceByTwo() {
         Series series = new Series("98273463");
@@ -95,7 +87,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canSliceByThree() {
         Series series = new Series("01234");
@@ -110,7 +101,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canSliceByThreeWithDuplicateDigits() {
         Series series = new Series("31001");
@@ -125,7 +115,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canSliceByFour() {
         Series series = new Series("91274");
@@ -139,7 +128,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canSliceByFive() {
         Series series = new Series("81228");
@@ -152,7 +140,6 @@ public class SeriesTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void throwsAnErrorIfNotEnoughDigitsToSlice() {
         expectedException.expect(IllegalArgumentException.class);

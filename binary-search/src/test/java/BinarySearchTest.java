@@ -1,12 +1,10 @@
-
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class BinarySearchTest {
 
@@ -19,7 +17,6 @@ public class BinarySearchTest {
         assertEquals(0, search.indexOf('6'));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void findsAValueInTheMiddleOfAnArray() {
         List<String> sortedList = Collections.unmodifiableList(
@@ -31,7 +28,6 @@ public class BinarySearchTest {
         assertEquals(3, search.indexOf("6"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void findsAValueAtTheBeginningOfAnArray() {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -43,7 +39,6 @@ public class BinarySearchTest {
         assertEquals(0, search.indexOf(1));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void findsAValueAtTheEndOfAnArray() {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -55,7 +50,6 @@ public class BinarySearchTest {
         assertEquals(6, search.indexOf(11));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void findsAValueInAnArrayOfOddLength() {
         List<Integer> sortedListOfOddLength = Collections.unmodifiableList(
@@ -67,7 +61,6 @@ public class BinarySearchTest {
         assertEquals(9, search.indexOf(144));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void findsAValueInAnArrayOfEvenLength() {
         List<Integer> sortedListOfEvenLength = Collections.unmodifiableList(
@@ -79,7 +72,6 @@ public class BinarySearchTest {
         assertEquals(5, search.indexOf(21));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void identifiesThatAValueIsNotIncludedInTheArray() {
         List<String> sortedList = Collections.unmodifiableList(
@@ -91,7 +83,6 @@ public class BinarySearchTest {
         assertEquals(-1, search.indexOf("7"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void aValueSmallerThanTheArraysSmallestValueIsNotIncluded() {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -103,7 +94,6 @@ public class BinarySearchTest {
         assertEquals(-1, search.indexOf(0));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void aValueLargerThanTheArraysSmallestValueIsNotIncluded() {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -115,7 +105,6 @@ public class BinarySearchTest {
         assertEquals(-1, search.indexOf(13));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void nothingIsIncludedInAnEmptyArray() {
         List<Integer> emptyList = Collections.emptyList();

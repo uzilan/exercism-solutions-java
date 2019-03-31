@@ -1,8 +1,7 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class DifferenceOfSquaresCalculatorTest {
 
@@ -20,7 +19,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testSquareOfSumUpToFive() {
         int expected = 225;
@@ -28,7 +26,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testSquareOfSumUpToHundred() {
         int expected = 25502500;
@@ -36,7 +33,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testSumOfSquaresUpToOne() {
         int expected = 1;
@@ -44,7 +40,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testSumOfSquaresUpToFive() {
         int expected = 55;
@@ -52,7 +47,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testSumOfSquaresUpToHundred() {
         int expected = 338350;
@@ -60,7 +54,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testDifferenceOfSquaresUpToOne() {
         int expected = 0;
@@ -68,7 +61,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testDifferenceOfSquaresUpToFive() {
         int expected = 170;
@@ -76,7 +68,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testDifferenceOfSquaresUpToHundred() {
         int expected = 25164150;

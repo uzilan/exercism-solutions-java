@@ -1,12 +1,12 @@
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertThat;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.NoSuchElementException;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertThat;
 
 public class SimpleLinkedListTest {
 
@@ -19,7 +19,6 @@ public class SimpleLinkedListTest {
         assertThat(list.size(), is(0));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void canCreateFromArray() {
         Character[] values = new Character[]{'1', '2', '3'};
@@ -27,7 +26,6 @@ public class SimpleLinkedListTest {
         assertThat(list.size(), is(3));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void popOnEmptyListWillThrow() {
         expectedException.expect(NoSuchElementException.class);
@@ -35,7 +33,6 @@ public class SimpleLinkedListTest {
         list.pop();
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void popReturnsLastAddedElement() {
         SimpleLinkedList<Integer> list = new SimpleLinkedList<Integer>();
@@ -47,7 +44,6 @@ public class SimpleLinkedListTest {
         assertThat(list.size(), is(0));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void reverseReversesList() {
         SimpleLinkedList<String> list = new SimpleLinkedList<String>();
@@ -64,7 +60,6 @@ public class SimpleLinkedListTest {
         assertThat(list.pop(), is("5"));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void canReturnListAsArray() {
         SimpleLinkedList<Character> list = new SimpleLinkedList<Character>();
@@ -77,7 +72,6 @@ public class SimpleLinkedListTest {
         assertArrayEquals(expected, list.asArray(Character.class));
     }
 
-    //@Ignore("Remove to run test")
     @Test
     public void canReturnEmptyListAsEmptyArray() {
         SimpleLinkedList<Object> list = new SimpleLinkedList<Object>();
