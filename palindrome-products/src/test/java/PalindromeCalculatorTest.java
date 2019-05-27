@@ -107,7 +107,6 @@ public class PalindromeCalculatorTest {
     }
 
     // TODO improve so no heap problems occur
-    @Ignore("Ignored because it causes heap problems")
     @Test
     public void smallestPalindromeFromQuadDigitFactors() {
         List<List<Integer>> expected = Collections.unmodifiableList(
@@ -123,7 +122,6 @@ public class PalindromeCalculatorTest {
     }
 
     // TODO improve so no heap problems occur
-    @Ignore("Ignored because it causes heap problems")
     @Test
     public void largestPalindromeFromQuadDigitFactors() {
         List<List<Integer>> expected = Collections.unmodifiableList(
